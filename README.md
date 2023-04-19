@@ -4,6 +4,31 @@ A lightweight custom JavaScript library to create and manipulate HTML elements.
 
 ## Installation
 
+### Using npm
+
+Install the package using npm:
+
+```bash
+npm install nathi
+```
+
+Include the library in your project:
+Node.js
+
+```javascript
+const NathiLib = require("nathi");
+const nathiLib = new NathiLib();
+```
+
+ES6
+
+```javascript
+import NathiLib from "nathi";
+const nathiLib = new NathiLib();
+```
+
+### Using script tag
+
 Download the `nathiLib.js` (or `nathiLib.min.js` for the minified version) file and include it in your HTML file:
 
 ```html
