@@ -99,4 +99,6 @@ Create a simple button that adds a new paragraph to a container:
 </html>
 ```
 
+This example creates a button that adds a new paragraph to a container element when clicked. The `nathiLib.createHTMLElement` function is used to create the paragraph element.
+
 **This README provides a brief introduction to the library, installation instructions, usage examples, and a complete example using the library's functions. You can customize it further according to your needs.**

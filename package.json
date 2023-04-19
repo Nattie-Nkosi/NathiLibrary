@@ -1,0 +1,26 @@
+{
+  "name": "nathi",
+  "version": "1.0.0",
+  "description": "A lightweight custom JavaScript library to create and manipulate HTML elements.",
+  "main": "NathiLib.js",
+  "scripts": {
+    "minify": "terser nathiLib.js --compress --mangle --output nathiLib.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nattie-Nkosi/NathiLibrary.git"
+  },
+  "files": [
+    "customLib.js",
+    "customLib.min.js"
+  ],
+  "author": "Nattie Nkosi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nattie-Nkosi/NathiLibrary/issues"
+  },
+  "homepage": "https://github.com/Nattie-Nkosi/NathiLibrary#readme",
+  "devDependencies": {
+    "terser": "^5.17.1"
+  }
+}
