@@ -67,3 +67,36 @@ Example:
 
   nathiLib.appendChildren(list, items);
 ```
+
+## Example
+
+Create a simple button that adds a new paragraph to a container:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NathiLib Example</title>
+  </head>
+  <body>
+    <button id="addButton">Add paragraph</button>
+    <div id="container"></div>
+    <script src="path/to/nathiLib.js"></script>
+    <script>
+      const nathiLib = new NathiLib();
+
+      const addButton = document.getElementById("addButton");
+      const container = document.getElementById("container");
+
+      addButton.addEventListener("click", () => {
+        const paragraph = nathiLib.createHTMLElement("p", {}, "New paragraph");
+        container.appendChild(paragraph);
+      });
+    </script>
+  </body>
+</html>
+```
+
+**This README provides a brief introduction to the library, installation instructions, usage examples, and a complete example using the library's functions. You can customize it further according to your needs.**
