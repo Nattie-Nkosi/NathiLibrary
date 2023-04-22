@@ -40,7 +40,40 @@
     children.forEach((child) => parent.appendChild(child));
   };
 
+  /**
+   * Adds a class to a specified element
+   * @param {HTMLElement} element - The element to which the class will be added.
+   * @param {string} className - Tyhe name of the class to add.
+   */
+  NathiLib.prototype.addClass = function (element, className) {
+    if (element.classList) {
+      // if the classList property is supported, use it to add class
+      element.classList.add(className);
+    } else {
+      // If the classList property is not supported, concatenate the class
+      element.classList += " " + className;
+    }
+  };
+
+  /**
+   * Removes a class from a specified elements
+   * @param {HTMLElement} element - The element to which the class will be removed.
+   * @param {string} className - the name of the class to removed
+   */
+  NathiLib.prototype.removeClass = function (element, className) {
+    if (element.classList) {
+      // if the classList property is supported, use it to remove the class
+      element.classList.remove(className);
+    } else {
+      // If the classList property is not supported, remove the class using a RegExp
+      var classToRemove = new RegExp("(^|\\s)" + className + "(\\s|$)", "g");
+      element.className = element.className.replace(classToRemove, " ").trim();
+    }
+  };
+
   if (!global.NathiLib) {
     global.NathiLib = NathiLib;
   }
 })(window);
+
+//

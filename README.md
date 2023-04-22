@@ -80,6 +80,22 @@ Append an array of children to a parent element.
 - `parent` (HTMLelement): The parent element to which the children will be appended.
 - `childrenArray` (Array<HTMLelement>): An array of HTML elements to append to the parent.
 
+```javascript
+addClass(element, className);
+```
+
+Add a class to the specified element.
+
+- `element` (HTMLElement): the element to which the class will be added.
+- `className` (string): The name of the class to too.
+
+```javascript
+removeClass(element, className);
+```
+
+- `element` (HTMLElement): The element from which the class will be removed.
+- `className` (string): The name of the class to remove.
+
 Example:
 
 ```javascript
@@ -117,6 +133,7 @@ Create a simple button that adds a new paragraph to a container:
 
       addButton.addEventListener("click", () => {
         const paragraph = nathiLib.createHTMLElement("p", {}, "New paragraph");
+        nathiLib.addClass(paragraph, "custom-class");
         container.appendChild(paragraph);
       });
     </script>
