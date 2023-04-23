@@ -33,7 +33,7 @@ Download the `nathiLib.js` (or `nathiLib.min.js` for the minified version) file 
 
 ```html
 <!-- Development version -->
-<script src="path/to/nathiLib.js"></script>
+<script src="node_modules/nathi/dist/customLib.bundle.js"></script>
 
 <!-- Minified version -->
 <script src="path/to/nathiLib.min.js"></script>
@@ -41,10 +41,36 @@ Download the `nathiLib.js` (or `nathiLib.min.js` for the minified version) file 
 
 ## Usage
 
-Create an instance of the library:
+### In a Browser Environment
+
+Include the nathiLib.bundle.js file from the dist folder in your HTML file:
+
+```html
+<script src="node_modules/nathi/dist/customLib.bundle.js"></script>
+```
+
+Create a new instance of the NathiLib class and start using its methods:
 
 ```javascript
 const nathiLib = new NathiLib();
+
+nathiLib.addClass(document.getElementById("example"), "example-class");
+```
+
+### In a Node.Js Environment
+
+Import the CustomLib class and create a new instance:
+
+```javascript
+const NathiLib = require("nathi");
+
+const nathiLib = new NathiLib();
+```
+
+Use the methods of the CustomLib class:
+
+```javascript
+nathiLib.addClass(document.getElementById("example"), "example-class");
 ```
 
 ## Functions
