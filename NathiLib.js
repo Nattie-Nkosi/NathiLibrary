@@ -1,11 +1,8 @@
-(function (global) {
-  /**
-   * NathiLib constructor function.
-   */
-  function NathiLib() {
-    // Contructor function
-  }
-
+/**
+ * @description A lightweight custom JavaScript library to create and manipulate HTML elements.
+ * @author Nattie Nkosi
+ */
+class NathiLib {
   /**
    * Create an HTML element with given attributes and text content.
    * @param {string} tagName - The tag name of the element to create.
@@ -13,11 +10,7 @@
    * @param {string} [textContent] - The text content for the element.
    * @returns {HTMLElement} The created HTML element.
    */
-  NathiLib.prototype.createHTMLElement = function (
-    tagName,
-    attributes,
-    textContent
-  ) {
+  createHTMLElement = function (tagName, attributes, textContent) {
     const element = document.createElement(tagName);
 
     for (const key in attributes) {
@@ -36,7 +29,7 @@
    * @param {HTMLElement} parent - The parent element to which the children will be appended.
    * @param {Array<HTMLElement>} children - An array of HTML elements to append to the parent.
    */
-  NathiLib.prototype.appendChildren = function (parent, children) {
+  appendChildren = function (parent, children) {
     children.forEach((child) => parent.appendChild(child));
   };
 
@@ -45,7 +38,7 @@
    * @param {HTMLElement} element - The element to which the class will be added.
    * @param {string} className - Tyhe name of the class to add.
    */
-  NathiLib.prototype.addClass = function (element, className) {
+  addClass = function (element, className) {
     if (element.classList) {
       // if the classList property is supported, use it to add class
       element.classList.add(className);
@@ -60,7 +53,7 @@
    * @param {HTMLElement} element - The element to which the class will be removed.
    * @param {string} className - the name of the class to removed
    */
-  NathiLib.prototype.removeClass = function (element, className) {
+  removeClass = function (element, className) {
     if (element.classList) {
       // if the classList property is supported, use it to remove the class
       element.classList.remove(className);
@@ -70,10 +63,13 @@
       element.className = element.className.replace(classToRemove, " ").trim();
     }
   };
+}
 
-  if (!global.NathiLib) {
-    global.NathiLib = NathiLib;
-  }
-})(window);
-
-//
+// Export the CustomLib class for Node.js and browser environments
+if (typeof module !== "undefined" && module.exports) {
+  // Node.js/CommonJS environment
+  module.exports = NathiLib;
+} else {
+  // Browser environment
+  window.NathiLib = NathiLib;
+}

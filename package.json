@@ -1,9 +1,11 @@
 {
   "name": "nathi",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A lightweight custom JavaScript library to create and manipulate HTML elements.",
-  "main": "NathiLib.js",
+  "main": "dist/nathiLib.bundle.js",
   "scripts": {
+    "build": "webpack --mode production",
+    "test": "jest",
     "minify": "terser nathiLib.js --compress --mangle --output nathiLib.min.js"
   },
   "repository": {
@@ -11,8 +13,8 @@
     "url": "git+https://github.com/Nattie-Nkosi/NathiLibrary.git"
   },
   "files": [
-    "customLib.js",
-    "customLib.min.js"
+    "nathiLib.js",
+    "nathiLib.min.js"
   ],
   "author": "Nattie Nkosi",
   "license": "ISC",
@@ -21,6 +23,12 @@
   },
   "homepage": "https://github.com/Nattie-Nkosi/NathiLibrary#readme",
   "devDependencies": {
-    "terser": "^5.17.1"
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-loader": "^9.1.2",
+    "jest": "^29.5.0",
+    "terser": "^5.17.1",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2"
   }
 }
