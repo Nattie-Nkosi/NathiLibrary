@@ -122,51 +122,30 @@ removeClass(element, className);
 - `element` (HTMLElement): The element from which the class will be removed.
 - `className` (string): The name of the class to remove.
 
-Example:
+```javascript
+on(selectorOrElement, eventName, callback);
+```
+
+Adds an event listener to the specified element or element found by the provided CSS selector.
+
+- `selectorOrElement` (string | HTMLElement): The CSS selector string or DOM element to which the event listener should be added.
+- `eventName` (string): The name of the event to listen for.
+- `callback` (Function): The function to be called when the event occurs.
 
 ```javascript
-  const list = document.getElementById("myList");
-  const items = [
-    nathiLib.createHTMLelement("li", {}, "Item 1")
-    nathiLib.createHTMLelement("li", {}, "Item 2")
-    nathiLib.createHTMLelement("li", {}, "Item 3")
-  ];
+const nathiLib = new CustomLib();
 
-  nathiLib.appendChildren(list, items);
+// Using a CSS selector string
+nathiLib.on("#example", "click", () => {
+  console.log("Element clicked");
+});
+
+// Using a DOM element
+nathiLib.on(document.getElementById("example"), "click", () => {
+  console.log("Element clicked");
+});
 ```
 
-## Example
-
-Create a simple button that adds a new paragraph to a container:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NathiLib Example</title>
-  </head>
-  <body>
-    <button id="addButton">Add paragraph</button>
-    <div id="container"></div>
-    <script src="path/to/nathiLib.js"></script>
-    <script>
-      const nathiLib = new NathiLib();
-
-      const addButton = document.getElementById("addButton");
-      const container = document.getElementById("container");
-
-      addButton.addEventListener("click", () => {
-        const paragraph = nathiLib.createHTMLElement("p", {}, "New paragraph");
-        nathiLib.addClass(paragraph, "custom-class");
-        container.appendChild(paragraph);
-      });
-    </script>
-  </body>
-</html>
-```
-
-This example creates a button that adds a new paragraph to a container element when clicked. The `nathiLib.createHTMLElement` function is used to create the paragraph element.
+This updated section in the README file explains how to use the `on()` method with either a CSS selector string or a DOM element. The parameter descriptions have been updated to reflect the changes made to the method, and new code examples have been provided to demonstrate its usage.
 
 **This README provides a brief introduction to the library, installation instructions, usage examples, and a complete example using the library's functions. You can customize it further according to your needs.**
