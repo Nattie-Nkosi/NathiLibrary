@@ -133,7 +133,7 @@ Adds an event listener to the specified element or element found by the provided
 - `callback` (Function): The function to be called when the event occurs.
 
 ```javascript
-const nathiLib = new CustomLib();
+const nathiLib = new NathiLib();
 
 // Using a CSS selector string
 nathiLib.on("#example", "click", () => {

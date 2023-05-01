@@ -1,6 +1,6 @@
 {
   "name": "nathi",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A lightweight custom JavaScript library to create and manipulate HTML elements.",
   "main": "dist/nathiLib.bundle.js",
   "scripts": {
