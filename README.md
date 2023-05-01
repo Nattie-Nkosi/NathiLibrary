@@ -1,8 +1,10 @@
 # Nathi JavaScript Library
 
-A lightweight custom JavaScript library to create and manipulate HTML elements.
+Nathi is a simple custom JavaScript library that provides a collection of utility methods for DOM manipulation and event handling.
 
 ## Installation
+
+Use the following command to install the library via npm:
 
 ### Using npm
 
@@ -12,8 +14,7 @@ Install the package using npm:
 npm install nathi
 ```
 
-Include the library in your project:
-Node.js
+To use the library, include it in your project and create a new instance:
 
 ```javascript
 const NathiLib = require("nathi");
@@ -29,51 +30,16 @@ const nathiLib = new NathiLib();
 
 ### Using script tag
 
-Download the `nathiLib.js` (or `nathiLib.min.js` for the minified version) file and include it in your HTML file:
+For browser usage, include the bundled file in your HTML:
 
 ```html
-<!-- Development version -->
-<script src="node_modules/nathi/dist/customLib.bundle.js"></script>
-
-<!-- Minified version -->
-<script src="path/to/nathiLib.min.js"></script>
+<script src="node_modules/nathi/dist/nathiLib.bundle.js"></script>
+<script>
+  const nathiLib = new NathiLib();
+</script>
 ```
 
-## Usage
-
-### In a Browser Environment
-
-Include the nathiLib.bundle.js file from the dist folder in your HTML file:
-
-```html
-<script src="node_modules/nathi/dist/customLib.bundle.js"></script>
-```
-
-Create a new instance of the NathiLib class and start using its methods:
-
-```javascript
-const nathiLib = new NathiLib();
-
-nathiLib.addClass(document.getElementById("example"), "example-class");
-```
-
-### In a Node.Js Environment
-
-Import the CustomLib class and create a new instance:
-
-```javascript
-const NathiLib = require("nathi");
-
-const nathiLib = new NathiLib();
-```
-
-Use the methods of the CustomLib class:
-
-```javascript
-nathiLib.addClass(document.getElementById("example"), "example-class");
-```
-
-## Functions
+## API Reference
 
 ```javascript
 createHTMLElement(tagName, attributes, textContent);
@@ -146,6 +112,10 @@ nathiLib.on(document.getElementById("example"), "click", () => {
 });
 ```
 
-This updated section in the README file explains how to use the `on()` method with either a CSS selector string or a DOM element. The parameter descriptions have been updated to reflect the changes made to the method, and new code examples have been provided to demonstrate its usage.
+## Project Structure
 
-**This README provides a brief introduction to the library, installation instructions, usage examples, and a complete example using the library's functions. You can customize it further according to your needs.**
+The nathi library has been organized using a separation of concerns approach, with each method placed in its own file inside the src folder. The index.js file imports and exports these methods as part of the NathiLib class. This structure makes it easier to maintain and add new features.
+
+## Contributing
+
+**Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.**
