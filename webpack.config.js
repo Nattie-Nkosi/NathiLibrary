@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./nathiLib.js",
+  entry: "./src/index.js",
   output: {
     filename: "nathiLib.bundle.js",
     path: path.resolve(__dirname, "dist"),

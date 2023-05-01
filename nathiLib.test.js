@@ -1,6 +1,6 @@
 const NathiLib =
   typeof module !== "undefined" && module.exports
-    ? require("./nathiLib")
+    ? require("./src")
     : window.NathiLib;
 const nathiLib = new NathiLib();
 
