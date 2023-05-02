@@ -53,7 +53,7 @@ Create an HTML element with given attibutes and text content.
 
 Returns the created HTML element.
 
-Examle:
+Example:
 
 ```javascript
 const button = nathiLib.createHTMLElement(
@@ -111,6 +111,16 @@ nathiLib.on(document.getElementById("example"), "click", () => {
   console.log("Element clicked");
 });
 ```
+
+```js
+off(selectorOrElement, eventName, callback);
+```
+
+Removes an event listener from an element or element found by the provided CSS selector.
+
+- `selectorOrElement` (string | HTMLElement): The CSS selector string or DOM element from which the event listener should be removed.
+- `eventName` (string): The name of the event to stop listening for.
+- `callback` (Function): The same function that was used when the event listener was added using the on() method.
 
 ## Project Structure
 
