@@ -7,7 +7,7 @@
  */
 export function hasClass(element, className) {
   if (element && className) {
-    return element.className.contains(className);
+    return element.classList.contains(className);
   }
   return false;
 }
